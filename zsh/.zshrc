@@ -107,5 +107,6 @@ alias vim='nvim'
 alias vi='nvim'
 alias q='exit'
 alias f='ranger'
+alias cat='bat'
 
 
