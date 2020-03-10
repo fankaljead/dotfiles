@@ -108,5 +108,6 @@ alias vi='nvim'
 alias q='exit'
 alias f='ranger'
 alias cat='bat'
+alias y='ydcv'
 
 
