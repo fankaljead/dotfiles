@@ -86,7 +86,10 @@ values."
          go-tab-width 4
          go-format-before-save t
          go-use-golangci-lint t
-         go-backend 'lsp)
+         go-backend 'go-mode
+         )
+         ;; go-backend (file-truename "/home/zxh/go/bin/bingo"))
+         ;; go-backend 'lsp)
      (python :variables
              python-backend 'anaconda
              python-test-runner 'pytest
@@ -181,7 +184,9 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(darkokai
+   dotspacemacs-themes '(
+                         ;; solarized-zenburn
+                         darkokai
                          zen-and-art
                          spacemacs-dark
                          spacemacs-light)
@@ -244,7 +249,7 @@ values."
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
    ;; (default 'cache)
-   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-auto-save-file-location 'original
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
    ;; If non nil, `helm' will try to minimize the space it uses. (default nil)
@@ -402,6 +407,9 @@ you should place your code here."
                 (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex --synctex=1%(mode)%' %t" TeX-run-TeX nil t))))
 
 
+  ;; (setq lsp-clients-go-command "/home/zxh/go/bin/bingo")
+  ;; (add-hook 'go-mode-hook #'lsp)
+
   (setq python-indent-offset 4)
 
   ;; Bind clang-format-region to C-M-tab in all modes:
@@ -444,11 +452,16 @@ you should place your code here."
 
   (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
                                 "xelatex -interaction nonstopmode %f"))
+  ;; (setq auto-save--timer 100)
+  ;; 显示系统时间
+  (spacemacs/toggle-display-time-on)
 
   ;; (require 'liberime)
   ;; pyim
   ;; 我使用全拼
   ;; (setq pyim-default-scheme 'quanpin)
+  ;; (setq pyim-default-scheme 'pyim-shuangpin)
+  ;; (setq pyim-schemes 'microsoft-shuangpin)
   (pyim-isearch-mode 1)
   ;; (liberime-start "/usr/share/rime-data/" (file-truename "~/.emacs.d/pyim/rime/"))
   ;; (liberime-select-schema "luna_pinyin_simp")
@@ -458,7 +471,6 @@ you should place your code here."
 
   ;; 选词框显示9个候选词
   (setq pyim-page-length 9)
-
 
   ;; (setq org-octopress-directory-top       "~/Documents/cnblogs.com/source")
   ;; (setq org-octopress-directory-posts     "~/Documents/cnblogs.com/source/_posts")
@@ -521,7 +533,7 @@ This function is called at the very end of Spacemacs initialization."
  '(TeX-engine (quote xetex))
  '(custom-safe-themes
    (quote
-    ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "801a567c87755fe65d0484cb2bded31a4c5bb24fd1fe0ed11e6c02254017acb2" "37ba833442e0c5155a46df21446cadbe623440ccb6bbd61382eb869a2b9e9bf9" "c7f10959cb1bc7a36ee355c765a1768d48929ec55dde137da51077ac7f899521" "63af2870d82065ce90d4c34054aa0a0e524824e9865af9f90f3d6987e61d756a" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "8a97050c9dd0af1cd8c3290b061f4b6032ccf2044ddc4d3c2c39e516239b2463" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "89536596ee5bdc5ef9ea3d3d5b515ea616285fa9274c836263024f1993f6b3dd" "392395ee6e6844aec5a76ca4f5c820b97119ddc5290f4e0f58b38c9748181e8d" "a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "47ec21abaa6642fefec1b7ace282221574c2dd7ef7715c099af5629926eb4fd7" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "604ac011fc9bd042bc041330b3a5e5a86e764a46f7e9fe13e2a1f9f83bf44327" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "cd7ffd461946d2a644af8013d529870ea0761dccec33ac5c51a7aaeadec861c2" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+    ("450f3382907de50be905ae8a242ecede05ea9b858a8ed3cc8d1fbdf2d57090af" "1dd7b369ab51f00e91b6a990634017916e7bdeb64002b4dda0d7a618785725ac" "3a5f04a517096b08b08ef39db6d12bd55c04ed3d43b344cf8bd855bde6d3a1ae" "e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "801a567c87755fe65d0484cb2bded31a4c5bb24fd1fe0ed11e6c02254017acb2" "37ba833442e0c5155a46df21446cadbe623440ccb6bbd61382eb869a2b9e9bf9" "c7f10959cb1bc7a36ee355c765a1768d48929ec55dde137da51077ac7f899521" "63af2870d82065ce90d4c34054aa0a0e524824e9865af9f90f3d6987e61d756a" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "8a97050c9dd0af1cd8c3290b061f4b6032ccf2044ddc4d3c2c39e516239b2463" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "89536596ee5bdc5ef9ea3d3d5b515ea616285fa9274c836263024f1993f6b3dd" "392395ee6e6844aec5a76ca4f5c820b97119ddc5290f4e0f58b38c9748181e8d" "a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "47ec21abaa6642fefec1b7ace282221574c2dd7ef7715c099af5629926eb4fd7" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "604ac011fc9bd042bc041330b3a5e5a86e764a46f7e9fe13e2a1f9f83bf44327" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "cd7ffd461946d2a644af8013d529870ea0761dccec33ac5c51a7aaeadec861c2" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
