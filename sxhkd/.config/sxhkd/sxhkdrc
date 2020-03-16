@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -119,3 +119,22 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+	
+
+# Applications
+# run nemo
+super + e
+	nemo
+# run emacs
+alt + e
+	emacs
+# run firefox
+alt + f
+	firefox
+# run deepin screenshot
+alt + a 
+	deepin-screenshot
+alt + p
+	rofi -show drun
+alt + w
+	rofi -show window

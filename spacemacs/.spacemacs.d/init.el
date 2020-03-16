@@ -86,7 +86,7 @@ values."
          go-tab-width 4
          go-format-before-save t
          go-use-golangci-lint t
-         go-backend 'go-mode
+         ;; go-backend 'go-mode
          )
          ;; go-backend (file-truename "/home/zxh/go/bin/bingo"))
          ;; go-backend 'lsp)
@@ -361,14 +361,12 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-;;(setq configuration-layer--elpa-archives
- ;;  '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-  ;;  ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-   ;;   ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+
 (setq configuration-layer-elpa-archives
-       '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-        ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-        ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+        ("org-cn"   . "http://elpa.emacs-china.org/org/")
+        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+
 
 (setq ycmd-server-command '("python3" "/home/zxh/ycmd/ycmd"))
 
