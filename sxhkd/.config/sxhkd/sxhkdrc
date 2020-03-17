@@ -19,7 +19,7 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + ctrl + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -138,3 +138,32 @@ alt + p
 	rofi -show drun
 alt + w
 	rofi -show window
+
+# Media keys
+XF86AudioRaiseVolume
+	amixer -q set Master 5%+ ; amixer set Master unmute
+
+XF86AudioLowerVolume
+	amixer -q set Master 5%- ; amixer set Master unmute
+
+XF86AudioMute
+	amixer -q set Master toggle
+
+XF86AudioMicMute
+	amixer -q  set Capture toggle
+
+XF86AudioPlay
+	playerctl play-pause 
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioNext
+	playerctl next
+
+# Brightness control
+XF86MonBrightnessDown
+	brightlight -d 30
+
+XF86MonBrightnessUp
+	brightlight -i 30
