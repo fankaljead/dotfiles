@@ -9,4 +9,5 @@ export PATH=$PATH:$GOBIN
 export EDITOR='emacs'
 export HIST_STAMPS="yyyy-mm-dd"
 export DOT=/home/zxh/dotfiles
+export TERMINAL='gnome-terminal'
 

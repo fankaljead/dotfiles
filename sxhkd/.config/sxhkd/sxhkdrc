@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	$TERMINAL
 
 # program launcher
 super + @space
@@ -138,6 +138,8 @@ alt + p
 	rofi -show drun
 alt + w
 	rofi -show window
+alt + {w,p,r}
+	rofi -show {window, drun,run}
 
 # Media keys
 XF86AudioRaiseVolume
@@ -163,7 +165,6 @@ XF86AudioNext
 
 # Brightness control
 XF86MonBrightnessDown
-	brightlight -d 30
-
+	xbacklight -dec 15
 XF86MonBrightnessUp
-	brightlight -i 30
+	xbacklight -inc 15

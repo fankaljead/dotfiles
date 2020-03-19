@@ -31,9 +31,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Syntax check
 "Plug 'w0rp/ale'
 call plug#end()
 
 source ~/.config/nvim/plugin-config.vim
-
