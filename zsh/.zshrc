@@ -109,5 +109,6 @@ alias q='exit'
 alias f='ranger'
 alias cat='bat'
 alias y='ydcv'
+alias yt='youtube-dl'
 
 

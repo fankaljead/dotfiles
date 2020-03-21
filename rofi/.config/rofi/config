@@ -2,6 +2,6 @@
 rofi.lines: 12
 rofi.font: Source Sans Pro 12
 rofi.show-icons: true
-rofi.theme: ~/.config/rofi/Arc-Dark.rasi
+rofi.theme: ~/.config/rofi/Monokai.rasi
 rofi.display-window: Window
 rofi.display-drun: Search

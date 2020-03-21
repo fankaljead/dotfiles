@@ -12,16 +12,17 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Emacs desktop='^2' state=tiled follow=on
-bspc rule -a firefox desktop='^3' state=tiled follow=on
+bspc rule -a Emacs  state=tiled follow=on
+#bspc rule -a firefox desktop='^3' state=tiled follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Qv2ray state=floating
+bspc rule -a mpv state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh
 picom -b
-feh --bg-scale Pictures/Wallpapers/wOC0k1.jpg
+feh --bg-scale Pictures/Wallpapers/milk-and-mocha-1920.jpg
 fcitx
 nm-applet
 dropbox
