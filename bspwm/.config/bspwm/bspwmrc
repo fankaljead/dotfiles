@@ -22,7 +22,7 @@ bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh
 picom -b
-feh --bg-scale Pictures/Wallpapers/milk-and-mocha-1920.jpg
+feh --bg-scale Pictures/Wallpapers/The-rendezvous_peppercarrot-wallpaper_by-David-Revoy.jpg
 fcitx
 nm-applet
 dropbox

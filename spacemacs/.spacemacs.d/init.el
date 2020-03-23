@@ -105,7 +105,7 @@ values."
      ;; ycmd
      themes-megapack
      ;; vim-powerline
-     ;; zhouxianghui
+     zhouxianghui
      ;; zilongshanren-ui
      )
    ;; List of additional packages that will be installed without being

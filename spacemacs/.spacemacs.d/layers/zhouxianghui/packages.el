@@ -39,8 +39,6 @@
 
   '(
     ;; A local package
-    (cnblogs
-     :location ("~/.spacemacs.d/private"))
     )
 
   "The list of Lisp packages required by the zhouxianghui layer.
