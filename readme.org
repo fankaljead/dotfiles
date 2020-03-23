@@ -1,3 +1,4 @@
 * My Manjaro Linux Dotfiles
 
+#+ATTR_ORG: :width 600
 [[./img/screenshot.png]]
