@@ -1,1 +1,3 @@
 * My Manjaro Linux Dotfiles
+
+[[./img/screenshot.png]]
