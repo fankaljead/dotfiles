@@ -30,3 +30,4 @@ dropbox
 #Notification
 pkill dunst
 run_once dunst &
+bspc rule --add Netease-Music state=floating rectangle=WxH+X+Y
