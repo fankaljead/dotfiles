@@ -4,6 +4,7 @@ set rnu
 set encoding=utf-8
 set autoread
 set clipboard+=unnamed
+set nohlsearch
 syntax on
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

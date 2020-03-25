@@ -113,5 +113,6 @@ alias y='ydcv'
 alias yt='youtube-dl'
 alias vbm='nvim $HOME/.config/bspwm/bspwmrc'
 alias vsb='nvim $HOME/.config/sxhkd/sxhkdrc'
-
+alias vpc='nvim $HOME/.config/polybar/config'
+alias sv='sudo nvim'
 

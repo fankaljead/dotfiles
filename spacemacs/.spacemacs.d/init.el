@@ -186,6 +186,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; solarized-zenburn
+                         doom-dark+
                          darkokai
                          doom-gruvbox
                          zen-and-art

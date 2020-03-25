@@ -1,4 +1,16 @@
-* My Manjaro Linux Dotfiles
+* Zhou Xianghui's dotfiles using bspwm polybar
+  - wm - bspwm
+  - bar - polybar
+  - terminal - termite st
+  - compositor - picom
+  - editor - emacs
+  - music player - netease-cloud-music
+** Screenshots
 
-#+ATTR_HTML: width="600px"
 [[./img/screenshot.png]]
+
+[[./img/desktop2.png]]
+
+[[./img/desktop3.png]]
+
+

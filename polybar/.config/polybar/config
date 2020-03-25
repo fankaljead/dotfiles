@@ -62,24 +62,35 @@ font-3 = Siji:pixelsize=11;1
 font-1 = FontAwesome:size=11;0
 font-5 = "Hack NerdFont:size=9;0"
 font-6 = "WenQuanYi Micro Hei:size=9;0"
+font-7 = mono:pixelsize=9;1
+font-8 = Inconsolata Nerd Font:size=8;1
+font-9 = Noto Color Emoji:scale=10:style=Regular;2
+;font-3 = Symbola:pixelsize=9;1
+
 
 modules-left = bspwm xwindow
+
 ;modules-center = mpd
 ;modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu 
-modules-right = pulseaudio battery date time
+;modules-right = pulseaudio memory cpu battery date time
+modules-right = pulseaudio battery weather date time
 
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
+tray-padding = 5
+tray-transparent = true
+tray-background = #222
+;tray-detached = true
+dim-value = 1.0
+
 
 wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -103,6 +114,14 @@ type = custom/script
 exec = /home/zxh/dotfiles/scripts/weather
 interval = 5000
 label-active-font = 4
+
+[module/pacpackage]
+
+type = custom/script
+exec = /home/zxh/dotfiles/scripts/pacpackage
+interval = 5000
+label-active-font = 4
+
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -243,17 +262,18 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "🌡 "
+format-prefix-foreground = #f1f1f1 
 format-underline = #f90000
 label = %percentage:2%%
+
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-prefix = " "
+format-prefix-foreground = #f1f1f1 
+format-underline = #ff00ff
 label = %percentage_used%%
 
 [module/wlan]
@@ -264,7 +284,7 @@ interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
 
-format-disconnected = 
+format-disconnected = 睊
 
 ramp-signal-0 = 
 ramp-signal-foreground = #FFFFFF
@@ -307,7 +327,7 @@ time = "%I:%M:%S(%p)"
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #ffffff
+format-underline = #927C27
 
 label = %time%
 
