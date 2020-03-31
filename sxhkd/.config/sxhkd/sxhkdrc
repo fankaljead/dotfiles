@@ -128,9 +128,9 @@ super + e
 # run emacs
 alt + e
 	emacs
-# run firefox
-alt + f
-	firefox
+# run browser
+alt + {f,b}
+	{firefox,brave}
 # run deepin screenshot
 alt + a 
 	deepin-screenshot

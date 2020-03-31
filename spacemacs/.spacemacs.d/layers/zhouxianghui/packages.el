@@ -36,9 +36,9 @@
   ;; '()
   ;; (add-to-list 'load-path "~/.spacemacs.d/private/cnblogs")
   ;; (require 'cnblogs)
-
   '(
     ;; A local package
+    cnfonts
     )
 
   "The list of Lisp packages required by the zhouxianghui layer.
@@ -70,3 +70,7 @@ Each entry is either:
 
 
 ;;; packages.el ends here
+
+(defun zhouxianghui/init-cnfonts()
+  (use-package cnfonts)
+  )

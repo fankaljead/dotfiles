@@ -19,10 +19,11 @@ bspc rule -a Qv2ray state=floating
 bspc rule -a mpv state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a netease-cloud-music desktop='^10' state=floating follow=on
 
 $HOME/.config/polybar/launch.sh
 picom -b
-feh --bg-scale Pictures/Wallpapers/Kano-Wallpaper-For-IPhone.png
+feh --bg-scale Pictures/Wallpapers/photo-1509460370682-bb161911847b.jpeg
 fcitx
 nm-applet
 dropbox
@@ -30,4 +31,3 @@ dropbox
 #Notification
 pkill dunst
 run_once dunst &
-bspc rule --add Netease-Music state=floating rectangle=WxH+X+Y
