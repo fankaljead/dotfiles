@@ -1,0 +1,17 @@
+#!/bin/bash
+# ====================================================
+#   Copyright (C)2020 All rights reserved.
+#
+#   Author        : fankaljead
+#   Email         : fankaljead@gmail.com
+#   File Name     : locker.sh
+#   Last Modified : 2020-03-31 12:51
+#   Describe      :
+#
+# ====================================================
+
+
+exec xautolock -detectsleep 
+  -time 1 -locker "i3lock -d -c 000070" \
+  -notify 30 \
+  -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"

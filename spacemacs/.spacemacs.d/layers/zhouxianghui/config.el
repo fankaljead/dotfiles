@@ -1,1 +1,1 @@
-(setq dotspacemacs-line-numbers 'relative)
+;; (setq dotspacemacs-line-numbers 'relative)
