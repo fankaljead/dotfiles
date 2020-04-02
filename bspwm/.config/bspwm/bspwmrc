@@ -32,3 +32,6 @@ dropbox
 #Notification
 pkill dunst
 run_once dunst &
+
+# lock screen
+xautolock -time 10 -locker i3lock-fancy

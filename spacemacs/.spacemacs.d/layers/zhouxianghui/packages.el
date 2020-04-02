@@ -39,6 +39,7 @@
   '(
     ;; A local package
     cnfonts
+    ;; ox-hugo
     )
 
   "The list of Lisp packages required by the zhouxianghui layer.
@@ -74,3 +75,8 @@ Each entry is either:
 (defun zhouxianghui/init-cnfonts()
   (use-package cnfonts)
   )
+;; (defun zhouxianghui/init-os-hugo()
+;;   (use-package ox-hugo
+;;     :ensure t          ;Auto-install the package from Melpa (optional)
+;;     :after ox)
+;;     )
