@@ -5,6 +5,13 @@
   - compositor - picom
   - editor - emacs
   - music player - netease-cloud-music
+** Intallation    
+   Make Sure You have Gnu Stow Installed
+   
+  #+BEGIN_SRC shell
+  stow -R 
+  #+END_SRC
+
 ** Screenshots
 
 [[./img/screenshot.png]]
@@ -14,3 +21,4 @@
 [[./img/desktop3.png]]
 
 [[./img/spacemacs.png]]
+
