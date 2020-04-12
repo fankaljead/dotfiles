@@ -140,7 +140,7 @@ alt + w
 	rofi -show window
 alt + {w,p,r}
 	rofi -show {window, drun,run}
-alt + l
+alt + 0
 	i3lock-fancy
 
 # Media keys

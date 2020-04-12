@@ -18,7 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+;background = #222
+background = #aa2F343F
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -74,12 +75,13 @@ modules-left = bspwm xwindow
 ;modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu 
 ;modules-right = pulseaudio memory cpu battery date time
-modules-right = pulseaudio battery weather date time
+modules-right = pulseaudio battery weather screenshot date time
 
 tray-position = right
 tray-padding = 5
 tray-transparent = true
-tray-background = #222
+tray-background = #aa2F343F
+;tray-background = #222
 ;tray-detached = true
 dim-value = 1.0
 
@@ -106,7 +108,8 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:75:...%
-format-background = #0a0a0a
+format-background = #5C383C
+;format-background = #aa2F343F
 format-padding = 5
 
 
@@ -117,6 +120,22 @@ exec = /home/zxh/dotfiles/scripts/weather
 interval = 5000
 label-active-font = 4
 
+[module/screenshot]
+
+type = custom/script
+exec = echo -e "\uf05b"
+format-prefix = "🖧 "
+interval = 5000
+click-left = deepin-screenshot
+click-right = gnome-screenshot
+label-active-font = 4
+label = %output:0:15:...%
+format = <label>
+;format-background = #999
+;format-foreground = #000
+;format-padding = 4
+
+;label = "\uf05b"
 [module/pacpackage]
 
 type = custom/script
