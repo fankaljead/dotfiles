@@ -194,7 +194,7 @@ values."
    dotspacemacs-themes '(
                          ;; solarized-zenburn
                          ;; cherry-blossom
-                         soothe
+                         ;; soothe
                          sanityinc-tomorrow-bright
                          srcery
                          ;; doom-dark+
@@ -208,7 +208,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack Nerd Font"
+   dotspacemacs-default-font '("JetBrains Mono"
                                :size 16
                                :weight normal
                                :width normal
@@ -503,10 +503,10 @@ you should place your code here."
   (setq markdown-command "vmd")
 
 
-  (setq-default web-mode-markup-indent-offset 4
-                web-mode-css-indent-offset 4
-                web-mode-code-indent-offset 4
-                web-mode-attr-indent-offset 4)
+  (setq-default web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2
+                web-mode-attr-indent-offset 2)
 
   )
 

@@ -24,7 +24,7 @@ bspc rule -a netease-cloud-music desktop='^10' state=floating follow=on
 
 $HOME/.config/polybar/launch.sh
 picom --experimental-backends -b
-feh --bg-fill Pictures/Wallpapers/wallpaper-lala.jpg
+feh --bg-fill ~/Pictures/Wallpapers/cyborg-girl-pink-hair-short-hair-4k-au-3840x2160.jpg
 fcitx
 nm-applet
 dropbox
