@@ -167,8 +167,8 @@ XF86AudioNext
 
 # Brightness control
 XF86MonBrightnessDown
-	/home/zxh/light.sh -inc 100
+	xbacklight -dec 10
 XF86MonBrightnessUp
-	/home/zxh/light.sh -dec 100
+	xbacklight -inc 10
 Print 
 	gnome-screenshot
