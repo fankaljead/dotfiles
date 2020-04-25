@@ -5,6 +5,12 @@
   - compositor - picom
   - editor - emacs
   - music player - netease-cloud-music
+** [Dependencies]    
+   - [[https://www.gnu.org/software/stow/][GNU Stow]] The way you manage your dotfiles.
+    A symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
+   - [[https://github.com/davatorium/rofi][Rofi]]
+    A window switcher, application launcher and dmenu replacement.
+   - 
 ** Intallation    
    Make Sure You have Gnu Stow Installed
    
@@ -21,4 +27,5 @@
 [[./img/desktop3.png]]
 
 [[./img/spacemacs.png]]
+
 
