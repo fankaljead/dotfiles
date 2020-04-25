@@ -134,12 +134,10 @@ alt + {f,b}
 # run deepin screenshot
 alt + a 
 	deepin-screenshot
-alt + p
-	rofi -show drun
-alt + w
-	rofi -show window
 alt + {w,p,r}
 	rofi -show {window, drun,run}
+alt + c
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 alt + 0
 	i3lock-fancy
 

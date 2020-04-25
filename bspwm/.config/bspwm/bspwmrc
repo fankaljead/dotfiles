@@ -17,6 +17,7 @@ bspc rule -a Emacs  state=tiled follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Qv2ray state=floating
 bspc rule -a mpv state=floating
+bspc rule -a Zathura state=tiled
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
@@ -35,3 +36,7 @@ run_once dunst &
 
 # lock screen
 xautolock -time 10 -locker i3lock-fancy
+
+libinput-gestures-setup start
+
+greenclip daemon &
