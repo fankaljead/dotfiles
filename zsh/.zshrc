@@ -117,10 +117,15 @@ alias vbm='nvim $HOME/.config/bspwm/bspwmrc'
 alias vsb='nvim $HOME/.config/sxhkd/sxhkdrc'
 alias vpc='nvim $HOME/.config/polybar/config'
 alias sv='sudo nvim'
+# man executable programs or shell commands
 alias maep='man 1'
+# man system calls (functions provided by the kernel)
 alias masc='man 2'
+# man library calls (functions within programs libraries)
 alias malc='man 3'
+# man special files (usually found in /dev)
 alias masf='man 4'
+# man special files and conventions, eg. /etc/passwd
 alias maff='man 5'
 alias mag='man 6'
 alias mam='man 7'
