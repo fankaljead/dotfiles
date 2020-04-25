@@ -1,16 +1,51 @@
 * Zhou Xianghui's dotfiles using bspwm polybar
-  - wm - bspwm
-  - bar - polybar
-  - terminal - termite st
-  - compositor - picom
-  - editor - emacs
-  - music player - netease-cloud-music
 ** [Dependencies]    
-   - [[https://www.gnu.org/software/stow/][GNU Stow]] The way you manage your dotfiles.
-    A symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
+   - os [[https://manjaro.org/][manjaro]]
+     A professionally made Linux based operating system that is a suitable replacement for Windows or MacOS. Multiple Desktop Environments are available through our Official and Community editions. We also work with manufacturers to design dedicated hardware. Visit the shop for more information.
+
+   - [[https://www.gnu.org/software/stow/][GNU Stow]] 
+     The way you manage your dotfiles.
+     A symlink farm manager which takes distinct packages of software and/or data located in separate directories on the filesystem, and makes them appear to be installed in the same place.
+   
+   - [[https://github.com/baskerville/bspwm][bspwm]] 
+     A tiling window manager that represents windows as the leaves of a full binary tree.
+    
    - [[https://github.com/davatorium/rofi][Rofi]]
-    A window switcher, application launcher and dmenu replacement.
-   - 
+     A window switcher, application launcher and dmenu replacement.
+    
+   - [[https://github.com/polybar/polybar][polybar]]
+     A fast and easy-to-use status bar
+     
+   - [[https://github.com/yshui/picom][picom]]
+     A fast and easy-to-use status bar
+     
+   - [[https://www.spacemacs.org/][spacemacs]]
+     A community-driven Emacs distribution - The best editor is neither Emacs nor Vim, it's Emacs *and* Vim! 
+     
+   - [[https://github.com/ranger/ranger][ranger]]
+     A VIM-inspired filemanager for the console.
+     
+   - [[https://github.com/pwmt/zathura][zathura]]
+     A highly customizable and functional document viewer. It provides a minimalistic and space saving interface as well as an easy usage that mainly focuses on keyboard interaction.    
+     
+   - [[https://github.com/ranger/ranger][ranger]]
+     A VIM-inspired filemanager for the console.
+     
+   - [[https://github.com/dunst-project/dunst][dunst]]
+     Lightweight and customizable notification daemon.
+
+   - [[https://github.com/tmux/tmux/][tmux]]
+     A terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
+
+   - [[https://mpv.io/][mpv]]
+     A free (as in freedom) media player for the command line. It supports a wide variety of media file formats, audio and video codecs, and subtitle types.
+    
+   - [[https://github.com/thestinger/termite/][termite]]
+     A keyboard-centric VTE-based terminal, aimed at use within a window manager with tiling and/or tabbing support. 
+     
+   - [[https://github.com/felixonmars/ydcv][ydcv]]
+     YouDao Console Version - Simple wrapper for Youdao online translate (Chinese <-> English) service API, as an alternative to the StarDict Console Version(sdcv). 
+     
 ** Intallation    
    Make Sure You have Gnu Stow Installed
    
