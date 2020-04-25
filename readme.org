@@ -1,6 +1,6 @@
 * Zhou Xianghui's dotfiles using bspwm polybar
 ** [Dependencies]    
-   - os [[https://manjaro.org/][manjaro]]
+   - [[https://manjaro.org/][manjaro]]
      A professionally made Linux based operating system that is a suitable replacement for Windows or MacOS. Multiple Desktop Environments are available through our Official and Community editions. We also work with manufacturers to design dedicated hardware. Visit the shop for more information.
 
    - [[https://www.gnu.org/software/stow/][GNU Stow]] 
@@ -17,7 +17,7 @@
      A fast and easy-to-use status bar
      
    - [[https://github.com/yshui/picom][picom]]
-     A fast and easy-to-use status bar
+     A lightweight compositor for X11 (previously a compton fork) 
      
    - [[https://www.spacemacs.org/][spacemacs]]
      A community-driven Emacs distribution - The best editor is neither Emacs nor Vim, it's Emacs *and* Vim! 
