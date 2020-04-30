@@ -131,4 +131,6 @@ alias mag='man 6'
 alias mam='man 7'
 alias masd='man 8'
 alias makr='man 9'
-
+alias ptx='pdflatex'
+alias xtx='xelatex'
+alias za='zathura'

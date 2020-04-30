@@ -287,7 +287,6 @@ ramp-1 = 🌔
 ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
-enable-scroll = true
 label =   %percentage%%
 
 ; Only applies if <bar> is used
