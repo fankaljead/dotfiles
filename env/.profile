@@ -11,7 +11,7 @@ export PATH=$PATH:$GOBIN
 export EDITOR='nvim'
 export HIST_STAMPS="yyyy-mm-dd"
 export DOT=/home/zxh/dotfiles
-export TERMINAL='gnome-terminal'
+export TERMINAL='st'
 export BROWSER='firefox'
 
 export JAVA_HOME=/usr/lib/jvm/java-13-openjdk
