@@ -17,6 +17,7 @@ bspc rule -a Emacs  state=tiled follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Timeshift-gtk state=floating
 bspc rule -a qv2ray state=floating
+bspc rule -a jetbrains-idea state=floating
 bspc rule -a mpv state=floating
 bspc rule -a Gnome-system-monitor state=floating
 bspc rule -a Zathura state=tiled
@@ -24,10 +25,11 @@ bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a netease-cloud-music desktop='^10' state=floating follow=on
+wmname LG3D
 
 $HOME/.config/polybar/launch.sh
 picom --experimental-backends -b
-feh --bg-fill $DOT/wallpaper/wall.png
+feh --bg-fill $DOT/wallpaper/wall.jpg
 #killall dwall
 #dwall -s=moon &
 fcitx
@@ -42,7 +44,5 @@ run_once dunst &
 xautolock -time 10 -locker i3lock-fancy
 
 libinput-gestures-setup start
-
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-greenclip daemon 
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+greenclip daemon &

@@ -102,3 +102,29 @@ set icons
 set color256
 set previewer ~/.config/lf/scope
 map i ~/.config/lf/scope $f | less -R
+
+# Bindings
+map <c-f> $lf -remote "send $id select '$(fzf)'"
+map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
+map gh
+map g top
+map D delete
+map C copyto
+map v select
+map M moveto
+map <c-n> push :mkdir<space>
+map <c-r> reload
+map <enter> shell
+map x $$f
+map X !$f
+map o &mimeopen $f
+map O $mimeopen --ask $f
+
+map A rename # at the very end
+map c push A<c-u> # new rename
+map I push A<c-a> # at the very beginning
+map i push A<a-b><a-b><a-f> # before extention
+map a push A<a-b> # after extention
+map b bulkrename
+
+map V push :!nvim<space>

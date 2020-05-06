@@ -29,7 +29,7 @@ nmap <leader>w <Plug>(easymotion-overwin-w)
 "Copyrights
 let g:file_copyright_name = "fankaljead"
 let g:file_copyright_email = "fankaljead@gmail.com"
-let g:file_copyright_auto_filetypes = ['sh', 'plx', 'pl', 'pm', 'py', 'python', 'h', 'hpp', 'c', 'cpp', 'java','go', 'js']
+let g:file_copyright_auto_filetypes = ['sh', 'plx', 'pl', 'pm', 'py', 'python', 'h', 'hpp', 'c', 'cpp', 'java','go', 'js', 'ts']
 
 "indent line
 "let g:indentLine_color_term = 239
