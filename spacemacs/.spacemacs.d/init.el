@@ -79,8 +79,9 @@ values."
      (latex :variables latex-build-command "XeLaTeX")
      (chinese :variables
               chinese-enable-youdao-dict t
-              chinese-default-input-method 'pinyin
-              chinese-enable-fcitx t)
+              ;; chinese-default-input-method 'pinyin
+              ;; chinese-enable-fcitx t
+              )
      (go :variables
          godoc-at-point-function 'godoc-gogetdoc
          gofmt-command "goimports"
@@ -116,9 +117,9 @@ values."
    ;; dotspacemacs-additional-packages '(posframe srcery-theme color-theme-sanityinc-tomorrow cherry-blossom-theme)
    dotspacemacs-additional-packages '(
                                       posframe
-                                      srcery-theme
+                                      ;;srcery-theme
                                       color-theme-sanityinc-tomorrow
-                                      soothe-theme
+                                      ;;soothe-theme
                                       ;; ox-hugo
                                       )
    ;; A list of packages that cannot be updated.
@@ -197,20 +198,20 @@ values."
                          ;; cherry-blossom
                          ;; soothe
                          sanityinc-tomorrow-bright
-                         srcery
+                         ;;srcery
                          ;; doom-dark+
                          ;; darkokai
                          ;; doom-gruvbox
                          ;; zen-and-art
-                         ;; spacemacs-dark
-                         ;; spacemacs-light
+                         spacemacs-dark
+                         spacemacs-light
                          )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("JetBrains Mono"
-                               :size 16
+   dotspacemacs-default-font '("Hack Nerd Font"
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -319,6 +320,8 @@ values."
    dotspacemacs-show-transient-state-color-guide t
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
    dotspacemacs-mode-line-unicode-symbols t
+   ;; dotspacemacs-mode-line-theme 'doom
+   dotspacemacs-mode-line-theme 'vim-powerline
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
@@ -371,6 +374,11 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
+
+;;(setq configuration-layer-elpa-archives
+;;    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;     ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;     ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
@@ -378,10 +386,10 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-(setq configuration-layer-elpa-archives
-      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
-        ("org-cn"   . "http://elpa.emacs-china.org/org/")
-        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+;;(setq configuration-layer-elpa-archives
+      ;;'(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+	;;("org-cn"   . "http://elpa.emacs-china.org/org/")
+	;;("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 
 
 (setq ycmd-server-command '("python3" "/home/zxh/ycmd/ycmd"))
@@ -478,16 +486,16 @@ you should place your code here."
   ;; (setq pyim-default-scheme 'quanpin)
   ;; (setq pyim-default-scheme 'pyim-shuangpin)
   ;; (setq pyim-schemes 'microsoft-shuangpin)
-  (pyim-isearch-mode 1)
+  ;; (pyim-isearch-mode 1)
   ;; (liberime-start "/usr/share/rime-data/" (file-truename "~/.emacs.d/pyim/rime/"))
   ;; (liberime-select-schema "luna_pinyin_simp")
   ;; (setq pyim-default-scheme 'rime-quanpin)
 
-  (setq pyim-page-tooltip 'posframe)
-  (setq pyim-dcache-backend 'pyim-dregcache)
+  ;; (setq pyim-page-tooltip 'posframe)
+  ;; (setq pyim-dcache-backend 'pyim-dregcache)
   ;; 选词框显示9个候选词
-  (setq pyim-page-length 9)
-  (setq pyim-default-scheme 'xiaohe-shuangpin)
+  ;; (setq pyim-page-length 9)
+  ;; (setq pyim-default-scheme 'xiaohe-shuangpin)
   (cnfonts-enable)
   ;; 让 spacemacs mode-line 中的 Unicode 图标正确显示。
   (cnfonts-set-spacemacs-fallback-fonts)
@@ -527,7 +535,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (pdf-tools tablist vmd-mode zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme org-octopress auctex-latexmk spaceline-all-the-icons all-the-icons memoize flycheck-ycmd company-ycmd ycmd request-deferred deferred stickyfunc-enhance srefactor engine-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic go-guru go-eldoc company-go go-mode mmm-mode markdown-toc markdown-mode helm-company helm-c-yasnippet gh-md fuzzy company-statistics company-c-headers company-auctex company auto-yasnippet yasnippet ac-ispell auto-complete youdao-dictionary names chinese-word-at-point pyim pyim-basedict xr pangu-spacing find-by-pinyin-dired fcitx ace-pinyin pinyinlib cdlatex auctex wgrep unfill smex mwim ivy-hydra counsel-projectile counsel swiper ivy xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient eshell-z eshell-prompt-extras esh-help disaster cmake-mode clang-format ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
+    (web-beautify tide typescript-mode ranger posframe livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc graphviz-dot-mode coffee-mode cnfonts pdf-tools tablist vmd-mode zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme org-octopress auctex-latexmk spaceline-all-the-icons all-the-icons memoize flycheck-ycmd company-ycmd ycmd request-deferred deferred stickyfunc-enhance srefactor engine-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic go-guru go-eldoc company-go go-mode mmm-mode markdown-toc markdown-mode helm-company helm-c-yasnippet gh-md fuzzy company-statistics company-c-headers company-auctex company auto-yasnippet yasnippet ac-ispell auto-complete youdao-dictionary names chinese-word-at-point pyim pyim-basedict xr pangu-spacing find-by-pinyin-dired fcitx ace-pinyin pinyinlib cdlatex auctex wgrep unfill smex mwim ivy-hydra counsel-projectile counsel swiper ivy xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient eshell-z eshell-prompt-extras esh-help disaster cmake-mode clang-format ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
  '(pyim-dicts
    (quote
     ((:name "zxh" :file "/home/zxh/Downloads/pyim-bigdict.pyim")))))
@@ -536,7 +544,6 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(default ((((class color) (min-colors 89)) (:foreground "#d2cfc6" :background "#292928"))))
  )
 
 

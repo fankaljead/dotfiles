@@ -1,9 +1,9 @@
 "Plugins
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'lervag/vimtex'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'lervag/vimtex'
 
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
