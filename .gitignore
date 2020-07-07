@@ -1,2 +1,3 @@
 spacemacs/.spacemacs.d/snippets
 mpv/.config/mpv/watch_later/
+nvim/.config/nvim/autoload
