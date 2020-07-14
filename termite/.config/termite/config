@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font =Hack Nerd Font 11
+font =JetBrainsMono Nerd Font 14
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -103,7 +103,8 @@ scrollback_lines = 10000
 foreground      = #f8f8f2
 foreground_bold = #f8f8f2
 cursor          = #f8f8f2
-background      = #272822
+background      = rgba(27, 28, 22, 0.9)
+#background      = #272822
 
 # black
 color0  = #272822

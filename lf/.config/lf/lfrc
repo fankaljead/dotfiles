@@ -1,3 +1,4 @@
+set previewer ~/.config/lf/preview
 # interpreter for shell commands (needs to be POSIX compatible)
 set shell sh
 
@@ -100,7 +101,7 @@ cmd zip ${{
 
 set icons
 set color256
-set previewer ~/.config/lf/scope
+#set previewer ~/.config/lf/scope
 map i ~/.config/lf/scope $f | less -R
 
 # Bindings
@@ -128,3 +129,5 @@ map a push A<a-b> # after extention
 map b bulkrename
 
 map V push :!nvim<space>
+
+set ratios 1:2:3
