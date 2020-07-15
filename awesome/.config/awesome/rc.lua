@@ -394,8 +394,20 @@ globalkeys = my_table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ altkey }, "p", function() awful.util.spawn("/home/zxh/.config/awesome/screenshot") end,
+    awful.key({ altkey }, "Print", function() awful.util.spawn("/home/zxh/.config/awesome/screenshot") end,
               {description = "take a screenshot", group = "hotkeys"}),
+    awful.key({ altkey, "Shift" }, "Print", function() awful.util.spawn_with_shell("/home/zxh/.config/awesome/screenshotslect") end,
+              {description = "select a area to take a screenshot", group = "hotkeys"}),
+    awful.key({ modkey }, "e", function() awful.util.spawn("pcmanfm") end,
+              {description = "open pcmanfm file manager", group = "launcher"}),
+    awful.key({ modkey }, "0", function() awful.util.spawn("i3lock-fancy") end,
+              {description = "lock screen", group = "hotkeys"}),
+    awful.key({ modkey }, "d", function() awful.util.spawn("rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'") end,
+              {description = "lock screen", group = "hotkeys"}),
+    awful.key({ altkey }, "p", function() awful.spawn(terminal.." -e pulsemixer") end,
+              {description = "volume control pulsemixer", group = "hotkeys"}),
+    awful.key({ modkey, "Shift" }, "e", function() awful.spawn(terminal.." -e ranger") end,
+              {description = "open ranger", group = "launcher"}),
 
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -803,7 +815,9 @@ autorunApps =
 --   "nitrogen --set-zoom-fill --random",
    "nitrogen --restore",
    "mpd",
-   "/home/zxh/.dropbox-dist/dropboxd"
+   "/home/zxh/.dropbox-dist/dropboxd",
+   "greenclip daemon",
+   "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 }
 if autorun then
    for app = 1, #autorunApps do
