@@ -6,3 +6,5 @@
 (setq org-latex-to-pdf-process
   '("xelatex -interaction nonstopmode %f"
      "xelatex -interaction nonstopmode %f")) ;
+
+(setq lsp-clients-emmy-lua-jar-path "/home/zxh/dotfiles/jar/EmmyLua-LS-all.jar")
