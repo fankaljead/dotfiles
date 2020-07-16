@@ -92,7 +92,7 @@ local altkey       = "Mod1"
 local terminal     = "termite"
 local vi_focus     = false -- vi-like client focus - https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
-local editor       = os.getenv("EDITOR") or "vim"
+local editor       = os.getenv("EDITOR") or "nvim"
 local gui_editor   = os.getenv("GUI_EDITOR") or "gvim"
 local browser      = os.getenv("BROWSER") or "firefox"
 local scrlocker    = "slock"
@@ -260,8 +260,8 @@ globalkeys = my_table.join(
     --          {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
-    awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
-              {description = "lock screen", group = "hotkeys"}),
+    awful.key({ altkey, "Control", "Shift" }, "l", function () os.execute(scrlocker) end,
+              {description = "lock screen use scrlocker", group = "hotkeys"}),
 
     -- Hotkeys
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -275,10 +275,10 @@ globalkeys = my_table.join(
               {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
+    awful.key({ altkey, "Control" }, "h", function () lain.util.tag_view_nonempty(-1) end,
               {description = "view  previous nonempty", group = "tag"}),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end,
-              {description = "view  previous nonempty", group = "tag"}),
+    awful.key({ altkey, "Control" }, "l", function () lain.util.tag_view_nonempty(1) end,
+              {description = "view  next nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ altkey,           }, "j",
@@ -403,11 +403,17 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "0", function() awful.util.spawn("i3lock-fancy") end,
               {description = "lock screen", group = "hotkeys"}),
     awful.key({ modkey }, "d", function() awful.util.spawn("rofi -modi \"clipboard:greenclip print\" -show clipboard -run-command '{cmd}'") end,
-              {description = "lock screen", group = "hotkeys"}),
+              {description = "rofi clipboard", group = "hotkeys"}),
+    awful.key({ altkey, "Shift" }, "d", function() awful.util.spawn("rofi -show run") end,
+              {description = "rofi -show run", group = "launcher"}),
+    awful.key({ altkey, "Shift" }, "w", function() awful.util.spawn("rofi -show window") end,
+              {description = "rofi -show window", group = "launcher"}),
     awful.key({ altkey }, "p", function() awful.spawn(terminal.." -e pulsemixer") end,
               {description = "volume control pulsemixer", group = "hotkeys"}),
     awful.key({ modkey, "Shift" }, "e", function() awful.spawn(terminal.." -e ranger") end,
               {description = "open ranger", group = "launcher"}),
+    awful.key({ altkey, "Shift" }, "m", function() awful.spawn(terminal.." -e ncmpcpp") end,
+              {description = "open ncmpcpp music player", group = "launcher"}),
 
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
@@ -574,6 +580,7 @@ globalkeys = my_table.join(
 		    os.execute(string.format("rofi -show %s -theme %s",
 		    'run', 'dmenu'))
 		end,
+              {description = "dmenu", group = "launcher"})
 		--[[
                   awful.prompt.run {
                     prompt       = "Run Lua code: ",
@@ -581,8 +588,8 @@ globalkeys = my_table.join(
                     exe_callback = awful.util.eval,
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
                   }
-              end, --]]
-              {description = "lua execute prompt", group = "awesome"})
+              end, 
+              {description = "lua execute prompt", group = "awesome"})--]]
     --]]
 )
 
