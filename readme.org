@@ -1,4 +1,7 @@
+#+ATTR_ORG: :width 400
+#+ATTR_HTML: :width 300px
 * Zhou Xianghui's dotfiles using bspwm polybar
+#+BEGIN_SRC sh
  ______                __  ___                   _           _
 |__  / |__   ___  _   _\ \/ (_) __ _ _ __   __ _| |__  _   _(_)
   / /| '_ \ / _ \| | | |\  /| |/ _` | '_ \ / _` | '_ \| | | | |
@@ -12,6 +15,7 @@
 | |_| | (_) | |_|  _| | |  __/\__ \
 |____/ \___/ \__|_| |_|_|\___||___/
 
+#+END_SRC
 
 ** [Dependencies]    
    - [[https://www.archlinux.org/][archlinux]]
