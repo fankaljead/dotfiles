@@ -60,25 +60,25 @@
 ** Screenshots
 
 - Desktop
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/desktop.png]]
 
 - Gotop
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/gotop.png]]
 
 - Mpv && Pulsemixer
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/play-video.png]]
 
 - Doom Emacs
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/doom-emacs.png]]
 
 - Ranger
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/ranger.png]]
 
 - Music Player ncmpcpp
-#+attr_org: :width 40%
+#+attr_org: :width 20%
 [[./img/ncmpcpp.png]]
