@@ -81,5 +81,5 @@
 
 - Music Player ncmpcpp
 #+ATTR_HTML: :width 40%
-#+ATTR_HTML style="center"
+#+ATTR_HTML: style: "center"
 [[./img/ncmpcpp.png]]
