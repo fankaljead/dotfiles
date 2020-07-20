@@ -80,5 +80,6 @@
 [[./img/ranger.png]]
 
 - Music Player ncmpcpp
-#+attr_org: :width 20%
+#+ATTR_HTML: :width 40%
+#+ATTR_HTML style="center"
 [[./img/ncmpcpp.png]]
