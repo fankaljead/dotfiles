@@ -1,5 +1,3 @@
-#+ATTR_ORG: :width 400
-#+ATTR_HTML: :width 300px
 * Zhou Xianghui's dotfiles using bspwm polybar
 #+BEGIN_SRC sh
  ______                __  ___                   _           _
@@ -62,19 +60,25 @@
 ** Screenshots
 
 - Desktop
+#+attr_org: :width 40%
 [[./img/desktop.png]]
 
 - Gotop
+#+attr_org: :width 40%
 [[./img/gotop.png]]
 
 - Mpv && Pulsemixer
+#+attr_org: :width 40%
 [[./img/play-video.png]]
 
 - Doom Emacs
+#+attr_org: :width 40%
 [[./img/doom-emacs.png]]
 
 - Ranger
+#+attr_org: :width 40%
 [[./img/ranger.png]]
 
 - Music Player ncmpcpp
+#+attr_org: :width 40%
 [[./img/ncmpcpp.png]]
